@@ -1,0 +1,349 @@
+trial next
+10 at 13 till 1
+a 3 2 10 13
+10 at 13 12 11 10 9 8
+sat
+trial next
+10 at 13 till 1
+a 3 5 10 13
+10 at 13 12 11 10 9 7 6
+sat
+trial next
+1 at 13 till 13
+7 at 13 till 1
+a 3 5 1 13
+a 3 2 7 13
+1 at 13 12 11 10 9
+7 at 13 12 11 10 9 8 7 6 5 4 3 2
+sat
+trial next
+7 at 13 till 1
+a 3 5 7 13
+7 at 13 12 11 10 9 8 7 6 5 4 3
+sat
+trial next
+1 at 13 till 13
+2 at 13 till 13
+a 3 5 1 13
+a 3 2 2 13
+1 at 13 12 11 10 9
+2 at 13 12 11 10 9 5 4
+sat
+trial next
+6 at 16 till 6
+a 3 14 6 16
+6 at 16 15 14 13
+sat
+trial next
+7 at 13 till 1
+2 at 13 till 13
+a 3 5 7 13
+a 3 2 2 13
+7 at 13 12 11 10 9 8 7 6 5
+2 at 13 12 11 10 9
+sat
+trial next
+10 at 13 till 1
+2 at 13 till 13
+a 3 5 10 13
+a 3 2 2 13
+10 at 13 12 11 10 9
+2 at 13 12 11 10 9
+sat
+trial next
+10 at 13 till 1
+a 3 2 10 13
+10 at 13 12
+sat
+trial next
+10 at 13 till 1
+a 3 5 10 13
+10 at 13 12 11 10
+sat
+trial next
+5 at 16 till 6
+a 3 14 5 16
+5 at 16 15 14
+sat
+trial next
+10 at 19 till 1
+a 3 5 10 19
+10 at 19 18 17 16 15
+sat
+trial next
+4 at 36 till 19
+a 6 5 4 36
+4 at 36 35 34 33 32 31 30 29 28 27 26 25
+sat
+trial next
+4 at 36 till 19
+1 at 36 till 13
+a 6 5 4 36
+a 3 5 1 36
+4 at 36 35 34 33 32 31 30 29 28 27
+1 at 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19
+sat
+trial next
+10 at 36 till 1
+7 at 36 till 36
+a 6 5 10 36
+a 3 5 7 36
+10 at 36 35 34 33 32 31 30 29 28 27 26 21 20 17
+7 at 36 35 34 33 32 31 30 29 28
+sat
+trial next
+4 at 36 till 19
+a 3 5 4 36
+4 at 36 35 34 33 32 31 30 29 28 27
+sat
+trial next
+6 at 36 till 21
+1 at 36 till 13
+a 6 5 6 36
+a 3 5 1 36
+6 at 36 35 34 33 32 31 30 29 28
+1 at 36 35 34 33 32 31 30 24 23 22 21
+sat
+trial next
+4 at 36 till 19
+10 at 36 till 1
+a 6 5 4 36
+a 3 5 10 36
+4 at 36 35 34 33 32 31 30 26
+10 at 36 35 34 33 32 31 30 29 28
+sat
+trial next
+6 at 36 till 21
+a 6 5 6 36
+6 at 36 35 34 33 32 31 30 29
+sat
+trial next
+2 at 36 till 36
+6 at 36 till 21
+a 6 5 2 36
+a 3 5 6 36
+2 at 36 35 34 33 32 31 30 11
+6 at 36 35 34 33 32
+sat
+trial next
+2 at 36 till 36
+10 at 36 till 1
+a 6 5 2 36
+a 3 5 10 36
+2 at 36 35 34 33 32 31
+10 at 36 35 34 33 32 31 30
+sat
+trial next
+6 at 36 till 21
+a 3 5 6 36
+6 at 36 35 33 32 31
+sat
+trial next
+4 at 39 till 19
+6 at 39 till 21
+a 3 14 4 39
+a 3 11 6 39
+4 at 39 38 37 36 35 34 33 26
+6 at 39 38 37 36 35 34 33 32
+sat
+trial next
+4 at 39 till 19
+3 at 39 till 39
+a 3 14 4 39
+a 3 11 3 39
+4 at 39 38 37 36 35 34 33 26
+3 at 39 38 37 36 35 34 33
+sat
+trial next
+2 at 44 till 36
+13 at 44 till 44
+a 6 5 2 44
+a 3 5 13 44
+2 at 44 43 42
+13 at 44 43 42 41 40 39 38 37 36 35 34 33
+sat
+trial next
+8 at 39 till 23
+13 at 39 till 29
+a 3 14 8 39
+a 3 11 13 39
+8 at 39 38 37 36 35 34
+13 at 39 38 37 36 35 34
+sat
+trial next
+6 at 36 till 21
+a 3 5 6 36
+6 at 36 35
+sat
+trial next
+10 at 44 till 1
+a 3 5 10 44
+10 at 44 43 42 41 40 39 38 37 36
+sat
+trial next
+8 at 39 till 23
+a 3 11 8 39
+8 at 39 38 37
+sat
+trial next
+2 at 44 till 36
+a 6 5 2 44
+2 at 44 43 42
+sat
+trial next
+7 at 44 till 44
+2 at 44 till 36
+a 6 5 7 44
+a 3 5 2 44
+7 at 44 43
+2 at 44 43
+sat
+trial next
+4 at 45 till 19
+a 6 11 4 45
+4 at 45 44 43 42 41 40 39 38
+sat
+trial next
+6 at 47 till 47
+11 at 47 till 41
+a 6 8 6 47
+a 3 8 11 47
+6 at 47 46 45 44 43 42 41 40 39
+11 at 47 46 45
+sat
+trial next
+11 at 47 till 41
+a 3 8 11 47
+11 at 47 46 45 44
+sat
+trial next
+11 at 47 till 41
+a 3 8 11 47
+11 at 47 46 45
+sat
+trial next
+10 at 57 till 57
+7 at 57 till 44
+11 at 57 till 57
+2 at 57 till 57
+a 6 2 10 57
+a 3 2 7 57
+a 6 13 11 57
+a 3 13 2 57
+10 at 57 56 55 54 53 52 51 50 49 48 47
+7 at 57 56 55 54 53 52 51 50
+11 at 57 56 55 54 53 52 51 50 49 48 47 46
+2 at 57 56 55 54 53 52 51 50 49 48 47 46
+sat
+trial next
+13 at 57 till 44
+11 at 57 till 57
+8 at 57 till 45
+6 at 57 till 47
+a 6 2 13 57
+a 3 2 11 57
+a 6 13 8 57
+a 3 13 6 57
+13 at 57 56 55 54 53 52 51 50
+11 at 57 56 55 54 53 52 51 50 49 48 47
+8 at 57 56 55 54 53 52 51
+6 at 57 56 55 54 53
+sat
+trial next
+13 at 57 till 44
+a 6 2 13 57
+13 at 57 56 55 54 53 52 51
+sat
+trial next
+13 at 57 till 44
+1 at 57 till 45
+6 at 57 till 47
+a 3 2 13 57
+a 6 13 1 57
+a 3 13 6 57
+13 at 57 56 55 54 53 52
+1 at 57 56 55 54 53 52
+6 at 57 56 55 54 53
+sat
+trial next
+10 at 57 till 57
+2 at 57 till 57
+8 at 57 till 45
+12 at 57 till 53
+a 6 2 10 57
+a 3 2 2 57
+a 6 13 8 57
+a 3 13 12 57
+10 at 57 56 55 54
+2 at 57 56 55 54 53
+8 at 57 56 55 54 53
+12 at 57 56 55 54
+sat
+trial next
+7 at 57 till 44
+8 at 57 till 45
+a 3 2 7 57
+a 6 13 8 57
+7 at 57 56 55 54
+8 at 57 56 55 54
+sat
+trial next
+10 at 57 till 57
+7 at 57 till 44
+8 at 57 till 45
+a 6 2 10 57
+a 3 2 7 57
+a 6 13 8 57
+10 at 57 56 55
+7 at 57 56 55
+8 at 57 56 55
+sat
+trial next
+8 at 60 till 45
+a 6 11 8 60
+8 at 60 59 58 57 56
+sat
+trial next
+8 at 57 till 45
+a 3 13 8 57
+8 at 57
+sat
+trial next
+8 at 64 till 45
+a 8 13 8 64
+8 at 64 63 62 61 60 59 58
+sat
+trial next
+13 at 65 till 44
+a 8 3 13 65
+13 at 65 64 63 62 61 60 59
+sat
+trial next
+13 at 65 till 44
+a 8 3 13 65
+13 at 65 64 63 62 61 60
+sat
+trial next
+13 at 65 till 44
+a 8 3 13 65
+13 at 65
+sat
+trial next
+13 at 70 till 44
+a 8 3 13 70
+13 at 70 69 68 67
+sat
+trial next
+13 at 70 till 44
+a 8 3 13 70
+13 at 70 69 68
+sat
+trial next
+unsat
+24084
+number of iter
+50
+in the cplist
+426
+unique time steps
+50

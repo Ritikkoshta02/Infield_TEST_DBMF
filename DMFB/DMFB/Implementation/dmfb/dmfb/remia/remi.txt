@@ -1,0 +1,9 @@
+    enforceDropletDispense(clauseFile, (3,1), [1]
+    enforceDropletDispense(clauseFile, (3,5), [1,7,13]
+    enforceMixing(clauseFile, (3,1), (3,4), 2, 4
+    enforceMixing(clauseFile, (3,2), (3,5), 7, 4
+    enforceMixing(clauseFile, (3,2), (3,5), 13, 4
+    enforceMixing(clauseFile, (2,2), (2,5), 21, 4
+    enforceMixing(clauseFile, (2,2), (2,5), 29, 4
+    enforceDropletDisappearence(clauseFile, (1,3), [21, 28, 36]
+    enforceDropletDisappearence(clauseFile, (5,3), [37]

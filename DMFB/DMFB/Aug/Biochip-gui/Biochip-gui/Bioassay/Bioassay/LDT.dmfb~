@@ -1,0 +1,46 @@
+dimension   8 13 
+
+accuracy 6 
+
+reagent(1, 3, 8, 11, Sample)  reagent(8,3,1,11,Buffer)
+
+ 
+
+1           dispense(1,3) dispense(8,3) dispense(1,11) dispense(8,11)
+2           move(1,3,2,3) move(8,3,7,3) move(1,11,2,11) move(8,11,7,11)
+3           move(2,3,3,3) move(7,3,6,3) move(2,11,3,11) move(7,11,6,11)
+4           mix_split(3,3,6,3,12) mix_split(3,11,6,11,12)
+17          dispense(8,3) move(6,3,6,4) dispense(8,11) move(6,11,6,12)
+18          move(6,4,6,5) move(6,12,6,13)
+19          move(8,3,7,3) move(8,11,7,11)
+20          move(7,3,6,3) move(7,11,6,11)
+21          mix_split(3,3,6,3,12) mix_split(3,11,6,11,12)
+34          dispense(8,3) move(6,3,6,2) move(6,11,6,10)
+35          move(6,2,6,1) move(6,10,6,9) move(6,13,6,12)
+36          move(8,3,7,3) mix_split(6,9,6,12,12) dispense(8,11)
+37          move(7,3,6,3)                 
+38          mix_split(3,3,6,3,12)
+49          move(6,9,7,9) move(6,12,6,13)
+50          move(8,11,7,11) move(7,9,8,9)
+51          move(6,3,7,3) move(7,11,6,11)
+52          move(7,3,8,3) mix_split(3,11,6,11,12)
+53          move(6,1,6,2)
+54          mix_split(6,2,6,5,12)
+55          move(8,3,8,2)
+56          move(8,2,8,1)
+65          move(6,11,7,11)
+66          move(7,11,8,11)
+67          move(6,2,6,3) move(6,5,7,5) move(8,11,8,12) move(6,13,6,12)
+68          mix_split(3,3,6,3,12) move(7,5,8,5) move(8,12,8,13) move(6,12,6,11)
+69          mix_split(3,11,6,11,12)
+81          move(6,3,7,3) move(3,3,3,4)
+82          move(7,3,8,3) move(3,4,3,5) move(3,11,3,10) move(6,11,7,11)
+83          move(3,5,3,6)
+84          move(3,6,3,7)
+85          mix_split(3,7,3,10,12) move(7,11,8,11)
+99          move(3,7,4,7) move(3,10,3,9)
+100         move(4,7,5,7) 
+101         move(5,7,6,7) move(3,9,3,8)
+102         move(3,8,3,7) move(6,7,7,7)
+103         move(7,7,8,7)
+104 		end

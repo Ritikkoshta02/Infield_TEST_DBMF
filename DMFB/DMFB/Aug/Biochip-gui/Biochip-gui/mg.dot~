@@ -1,0 +1,58 @@
+digraph "DD" { 
+ node [fontsize = 8];
+0 -> 15 [label = "1",fontsize = 8, arrowhead = open, arrowsize = .5];
+1 -> 23 [label = "17",fontsize = 8,arrowhead = open, arrowsize = .5];
+1 -> 17 [label = "5",fontsize = 8,arrowhead = open, arrowsize = .5];
+1 -> 19 [label = "9",fontsize = 8,arrowhead = open, arrowsize = .5];
+1 -> 21 [label = "13",fontsize = 8,arrowhead = open, arrowsize = .5];
+1 -> 15 [label = "2",fontsize = 8,arrowhead = open, arrowsize = .5];
+2 -> 16 [label = "3",fontsize = 8,arrowhead = open, arrowsize = .5];
+2 -> 18 [label = "7",fontsize = 8,arrowhead = open, arrowsize = .5];
+2 -> 20 [label = "11",fontsize = 8,arrowhead = open, arrowsize = .5];
+2 -> 22 [label = "15",fontsize = 8,arrowhead = open, arrowsize = .5];
+3 -> 24 [label = "19",fontsize = 8,arrowhead = open, arrowsize = .5];
+3 -> 25 [label = "21",fontsize = 8,arrowhead = open, arrowsize = .5];
+15 -> 16 [label = "4",fontsize = 8,arrowhead = open, arrowsize = .5];
+15 -> 17 [label = "6",fontsize = 8,arrowhead = open, arrowsize = .5];
+16 -> 18 [label = "8",fontsize = 8,arrowhead = open, arrowsize = .5];
+16 -> 13 [label = "23",fontsize = 8,arrowhead = open, arrowsize = .5];
+17 -> 19 [label = "10",fontsize = 8,arrowhead = open, arrowsize = .5];
+17 -> 14 [label = "24",fontsize = 8,arrowhead = open, arrowsize = .5];
+18 -> 20 [label = "12",fontsize = 8,arrowhead = open, arrowsize = .5];
+18 -> 13 [label = "25",fontsize = 8,arrowhead = open, arrowsize = .5];
+19 -> 21 [label = "14",fontsize = 8,arrowhead = open, arrowsize = .5];
+19 -> 14 [label = "26",fontsize = 8,arrowhead = open, arrowsize = .5];
+20 -> 13 [label = "27",fontsize = 8,arrowhead = open, arrowsize = .5];
+20 -> 22 [label = "16",fontsize = 8,arrowhead = open, arrowsize = .5];
+21 -> 14 [label = "28",fontsize = 8,arrowhead = open, arrowsize = .5];
+21 -> 23 [label = "18",fontsize = 8,arrowhead = open, arrowsize = .5];
+22 -> 24 [label = "20",fontsize = 8,arrowhead = open, arrowsize = .5];
+22 -> 13 [label = "29",fontsize = 8,arrowhead = open, arrowsize = .5];
+23 -> 25 [label = "22",fontsize = 8,arrowhead = open, arrowsize = .5];
+23 -> 14 [label = "30",fontsize = 8,arrowhead = open, arrowsize = .5];
+24 -> 13 [label = "31",fontsize = 8,arrowhead = open, arrowsize = .5];
+24 -> 13 [label = "32",fontsize = 8,arrowhead = open, arrowsize = .5];
+25 -> 14 [label = "33",fontsize = 8,arrowhead = open, arrowsize = .5];
+25 -> 14 [label = "34",fontsize = 8,arrowhead = open, arrowsize = .5];
+0 [label = "DsS",  shape = square]
+1 [label = "DsB",  shape = square]
+2 [label = "DsB",  shape = square]
+3 [label = "DsR",  shape = square]
+13 [label="waste",fontcolor=white,width=.3,shape = rectangle,fontsize = 12]
+14 [label="waste",fontcolor=white,width=.3,shape = rectangle,fontsize = 12]
+15 [label = "M1\n50", shape = oval]
+16 [label = "M2\n51", shape = oval]
+17 [label = "M3\n52", shape = oval]
+18 [label = "M4\n53", shape = oval]
+19 [label = "M5\n54", shape = oval]
+20 [label = "M6\n55", shape = oval]
+21 [label = "M7\n56", shape = oval]
+22 [label = "M8\n57", shape = oval]
+23 [label = "M9\n58", shape = oval]
+24 [label = "M10\n59", shape = oval]
+25 [label = "M11\n60", shape = oval]
+{ rank = same;0;1;2;}
+{ rank = same;16;17;}
+{ rank = same;18;19;}
+{ rank = same;13;14;}
+}

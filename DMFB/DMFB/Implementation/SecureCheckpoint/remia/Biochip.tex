@@ -1,0 +1,1945 @@
+\documentclass[a4paper,landscape]{article}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\tikzset{droplet/.style={draw,circle,fill, yellow, inner sep=5pt, text=black}}
+\tikzset{detector/.style={gray}}
+\tikzset{detecting/.style={green}}
+\tikzset{mixer/.style={draw,circle,fill, pink, inner sep=5pt, text=black}}
+\tikzset{dispenser/.style={black}}
+\tikzset{sink/.style={cyan,fill,rectangle,minimum height = 2.6em, minimum width = 2.6em, text=black}}
+
+\fbox{
+
+ Time   0
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time   1
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,7.500000) {$2$};
+\node[droplet] at (0.500000,5.500000) {$1$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time   2
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (1.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,6.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time   3
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (1.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time   4
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time   5
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time   6
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time   7
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time   8
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time   9
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  10
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  11
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  12
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  13
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  14
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  15
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  16
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  17
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  18
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (5.500000,7.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  19
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (3.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,7.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  20
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (3.500000,5.500000) {$1$};
+\node[droplet] at (4.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,6.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  21
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (3.500000,6.500000) {$1$};
+\node[droplet] at (3.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,5.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  22
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (3.500000,5.500000) {$1$};
+\node[droplet] at (4.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,4.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  23
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,5.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  24
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,4.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  25
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,3.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  26
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  27
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,1.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  28
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,0.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  29
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (5.500000,0.500000) {$3$};
+\node[droplet] at (5.500000,7.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  30
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (5.500000,1.500000) {$3$};
+\node[droplet] at (5.500000,7.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  31
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (5.500000,0.500000) {$3$};
+\node[droplet] at (5.500000,6.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  32
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,0.500000) {$3$};
+\node[droplet] at (6.500000,6.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  33
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (7.500000,0.500000) {$3$};
+\node[droplet] at (6.500000,5.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  34
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,0.500000) {$3$};
+\node[droplet] at (7.500000,5.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  35
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,4.500000) {$1$};
+\node[droplet] at (5.500000,4.500000) {$2$};
+\node[droplet] at (6.500000,1.500000) {$3$};
+\node[droplet] at (7.500000,5.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  36
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,3.500000) {$1$};
+\node[droplet] at (5.500000,4.500000) {$2$};
+\node[droplet] at (6.500000,2.500000) {$3$};
+\node[droplet] at (7.500000,4.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  37
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,3.500000) {$1$};
+\node[droplet] at (5.500000,3.500000) {$2$};
+\node[droplet] at (6.500000,1.500000) {$3$};
+\node[droplet] at (7.500000,3.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  38
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (3.500000,3.500000) {$1$};
+\node[droplet] at (5.500000,4.500000) {$2$};
+\node[droplet] at (6.500000,1.500000) {$3$};
+\node[droplet] at (7.500000,4.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  39
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (3.500000,4.500000) {$1$};
+\node[droplet] at (5.500000,3.500000) {$2$};
+\node[droplet] at (6.500000,2.500000) {$3$};
+\node[droplet] at (6.500000,4.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  40
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (3.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,4.500000) {$2$};
+\node[droplet] at (6.500000,3.500000) {$3$};
+\node[droplet] at (6.500000,4.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  41
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (6.500000,2.500000) {$3$};
+\node[droplet] at (6.500000,3.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  42
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (5.500000,2.500000) {$3$};
+\node[droplet] at (7.500000,3.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  43
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (4.500000,2.500000) {$3$};
+\node[droplet] at (7.500000,2.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  44
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (4.500000,3.500000) {$3$};
+\node[droplet] at (7.500000,2.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  45
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (4.500000,4.500000) {$3$};
+\node[droplet] at (7.500000,2.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  46
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (4.500000,3.500000) {$3$};
+\node[droplet] at (6.500000,2.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  47
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (4.500000,2.500000) {$3$};
+\node[droplet] at (5.500000,2.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  48
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (3.500000,2.500000) {$3$};
+\node[droplet] at (5.500000,3.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  49
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+\node[droplet] at (5.500000,3.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  50
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (1.500000,2.500000) {$3$};
+\node[droplet] at (6.500000,3.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  51
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (1.500000,1.500000) {$3$};
+\node[droplet] at (7.500000,3.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  52
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (1.500000,0.500000) {$3$};
+\node[droplet] at (6.500000,3.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  53
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (0.500000,0.500000) {$3$};
+\node[droplet] at (6.500000,4.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  54
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (0.500000,1.500000) {$3$};
+\node[droplet] at (6.500000,5.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  55
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (0.500000,2.500000) {$3$};
+\node[droplet] at (6.500000,6.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  56
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (0.500000,3.500000) {$3$};
+\node[droplet] at (5.500000,6.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  57
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (0.500000,2.500000) {$3$};
+\node[droplet] at (4.500000,6.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  58
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (1.500000,2.500000) {$3$};
+\node[droplet] at (4.500000,7.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  59
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,6.500000) {$1$};
+\node[droplet] at (4.500000,5.500000) {$2$};
+\node[droplet] at (1.500000,1.500000) {$3$};
+\node[droplet] at (5.500000,7.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  60
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,6.500000) {$1$};
+\node[droplet] at (4.500000,4.500000) {$2$};
+\node[droplet] at (2.500000,1.500000) {$3$};
+\node[droplet] at (5.500000,6.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  61
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,4.500000) {$2$};
+\node[droplet] at (2.500000,0.500000) {$3$};
+\node[droplet] at (5.500000,5.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  62
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,4.500000) {$1$};
+\node[droplet] at (5.500000,3.500000) {$2$};
+\node[droplet] at (3.500000,0.500000) {$3$};
+\node[droplet] at (5.500000,5.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  63
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,3.500000) {$1$};
+\node[droplet] at (5.500000,3.500000) {$2$};
+\node[droplet] at (4.500000,0.500000) {$3$};
+\node[droplet] at (6.500000,5.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  64
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,2.500000) {$2$};
+\node[droplet] at (5.500000,0.500000) {$3$};
+\node[droplet] at (7.500000,5.500000) {$4$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  65
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,2.500000) {$2$};
+\node[droplet] at (5.500000,0.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  66
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,2.500000) {$2$};
+\node[droplet] at (5.500000,0.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  67
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,2.500000) {$2$};
+\node[droplet] at (5.500000,1.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  68
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,2.500000) {$2$};
+\node[droplet] at (5.500000,1.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  69
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,2.500000) {$2$};
+\node[droplet] at (6.500000,1.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  70
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,3.500000) {$1$};
+\node[droplet] at (5.500000,3.500000) {$2$};
+\node[droplet] at (5.500000,1.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  71
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,4.500000) {$1$};
+\node[droplet] at (5.500000,4.500000) {$2$};
+\node[droplet] at (5.500000,1.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  72
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,5.500000) {$1$};
+\node[droplet] at (5.500000,5.500000) {$2$};
+\node[droplet] at (5.500000,1.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  73
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (3.500000,5.500000) {$1$};
+\node[droplet] at (4.500000,5.500000) {$2$};
+\node[droplet] at (4.500000,1.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  74
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (4.500000,5.500000) {$1$};
+\node[droplet] at (4.500000,6.500000) {$2$};
+\node[droplet] at (4.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  75
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,5.500000) {$1$};
+\node[droplet] at (4.500000,5.500000) {$2$};
+\node[droplet] at (4.500000,3.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  76
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,4.500000) {$1$};
+\node[droplet] at (4.500000,4.500000) {$2$};
+\node[droplet] at (4.500000,3.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  77
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,4.500000) {$1$};
+\node[droplet] at (4.500000,3.500000) {$2$};
+\node[droplet] at (4.500000,4.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  78
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,3.500000) {$1$};
+\node[droplet] at (4.500000,2.500000) {$2$};
+\node[droplet] at (3.500000,4.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  79
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (4.500000,1.500000) {$2$};
+\node[droplet] at (2.500000,4.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  80
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (6.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,1.500000) {$2$};
+\node[droplet] at (2.500000,3.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  81
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,0.500000) {$2$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  82
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (6.500000,0.500000) {$2$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  83
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (7.500000,0.500000) {$2$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  84
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (7.500000,1.500000) {$2$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  85
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (7.500000,2.500000) {$2$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  86
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  87
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  88
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  89
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  90
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  91
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  92
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (2.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  93
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,1.500000) {$1$};
+\node[droplet] at (3.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  94
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,1.500000) {$1$};
+\node[droplet] at (4.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  95
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (5.500000,2.500000) {$1$};
+\node[droplet] at (4.500000,3.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  96
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (4.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,3.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  97
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (3.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,3.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  98
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,2.500000) {$1$};
+\node[droplet] at (6.500000,3.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time  99
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,1.500000) {$1$};
+\node[droplet] at (6.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time 100
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,2.500000) {$1$};
+\node[droplet] at (5.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time 101
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,1.500000) {$1$};
+\node[droplet] at (6.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time 102
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,0.500000) {$1$};
+\node[droplet] at (7.500000,2.500000) {$3$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time 103
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,0.500000) {$1$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time 104
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,0.500000) {$1$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time 105
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+\node[droplet] at (2.500000,0.500000) {$1$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time 106
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\fbox{
+
+ Time 107
+
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (8,8);
+\node[sink] at (2.500000,-0.500000) {\Large $O$};
+\node[sink] at (8.500000,5.500000) {\Large $W$};
+\node[sink] at (8.500000,2.500000) {\Large $W$};
+
+\end{tikzpicture}
+}
+\pagebreak
+\vspace{20pt}
+
+\end{document}

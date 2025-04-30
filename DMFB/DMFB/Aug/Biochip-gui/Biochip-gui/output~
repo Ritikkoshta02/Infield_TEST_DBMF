@@ -1,0 +1,2 @@
+root = Tk()
+ B = Biochip(root,6,6)

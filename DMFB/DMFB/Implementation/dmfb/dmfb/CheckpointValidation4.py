@@ -1,0 +1,496 @@
+'''
+Created on 30 Oct, 2018
+@author: sukanta
+'''
+
+import subprocess
+
+__Id = 1
+
+
+
+# DMFB specification
+(numRows, numCols) = (6,6)
+dropletDispenserDict = {1:(2,1), 2: (2,6), 3:(2,1)} #Id: dispense locations (x,y)
+outputLocationList = [(5,1), (6,5)]
+
+
+T = 20   #Assay time
+
+
+def init(clauseFile):
+#===============================================================================
+# init() appends the initial conditions for the z3 solver to analyze the clauses
+# clauseFile is the file descriptor of SAT instance file
+#===============================================================================
+    clauseFile.write("import sys\n")
+    clauseFile.write("import time\n")
+    clauseFile.write("sys.path.append(\"/home/sukanta/App/z3-master/build\")\n")
+    clauseFile.write("from z3 import *\n")
+    clauseFile.write("s = Optimize()\n")
+    
+def finish(clauseFile):
+    clauseFile.write("\n\n")    
+    clauseFile.write('start = time.time()\n')
+    clauseFile.write("print s.check()\n")
+    clauseFile.write("print time.time()-start \n")
+    #For printing SAT assignments 
+    clauseFile.write("fp = open(\'op\',\'w\')\n")
+    clauseFile.write("M = s.model()\n")
+    clauseFile.write("for i in M:\n")
+    clauseFile.write("    fp.write(str(i) + \" = \" + str(s.model()[i]) + '\\n')\n")    
+    
+   
+    clauseFile.close()
+    
+
+def varDeclare(clauseFile, dropletIdList):
+#===============================================================================
+# dropletIdList is the list of droplet IDs that may appear in the grid  
+# T is the assay time -- known from existing synthesis
+# (numRows x numCols) is the dimension of biochip
+# (1,1) -> top left cell and (numRows, numCols) -> bottom right cell
+#===============================================================================
+    global numRows, numCols, T, dropletDispenserDict, outputLocationList
+    
+    for d in dropletIdList:  
+        clauseFile.write("#================================================================================================\n") 
+        clauseFile.write("# Variables for droplet %d \n"%d) 
+        clauseFile.write("#================================================================================================\n") 
+        for t in range(0,T+1):
+            for x in range(1, numRows+1):
+                for y in range(1,numRows+1):
+                    clauseFile.write("a_%d_%d_%d_%d = Bool('a_%d_%d_%d_%d')\n"%(x,y,d,t,x,y,d,t))
+                    
+    #Declare variables for denoting input operations
+    for Id in dropletDispenserDict.keys():
+        clauseFile.write("#================================================================================================\n") 
+        clauseFile.write("# Variables for droplet dispenser (Id =  %d) \n"%Id) 
+        clauseFile.write("#================================================================================================\n") 
+        (x,y) = dropletDispenserDict[Id]
+        for t in range(0,T+1):
+            clauseFile.write("ip_%d_%d_%d = Bool('ip_%d_%d_%d')\n"%(x,y,t,x,y,t))
+    
+    #Declare variables for denoting output operations
+    for (x,y) in outputLocationList:
+        clauseFile.write("#================================================================================================\n") 
+        clauseFile.write("# Variables for droplet output at location (%d,%d) \n"%(x,y)) 
+        clauseFile.write("#================================================================================================\n") 
+        for t in range(0,T+1):
+            clauseFile.write("op_%d_%d_%d = Bool('op_%d_%d_%d')\n"%(x,y,t,x,y,t))
+            
+    
+                    
+
+def dropletUniqnessConstraint(clauseFile, dropletIdList):
+#===============================================================================
+# each droplet d may occur in at most one cell per time step -- uniqness
+#===============================================================================
+    global numRows, numCols, T
+    
+    clauseFile.write("#================================================================================================\n") 
+    clauseFile.write("# Droplet uniqness constraint -- at most one instance of a droplet can appear on the grid at any t\n")
+    clauseFile.write("#================================================================================================\n") 
+    for d in dropletIdList:   
+        clauseFile.write("# consistency clauses (uniqueness) for droplet %d \n"%d) 
+        for t in range(0,T+1):
+            constraint = "s.add(("
+            for x in range(1, numRows+1):
+                for y in range(1,numRows+1):
+                    constraint += "If(a_" + str(x) + "_" + str(y) + "_" + str(d) + "_" + str(t) + " == True, 1, 0) + "
+                    
+            constraint = constraint[:-3] + ") <= 1)\n"
+            clauseFile.write(constraint)
+        
+                    
+                    
+def cellOccupancyConstraint(clauseFile, dropletIdList):
+#===============================================================================
+# each cell can contain only one droplet at any time instant
+# This may be relaxed for simulating more sophisticated attacks -- TO DO
+#===============================================================================
+    global numRows, numCols, T
+    
+    clauseFile.write("#================================================================================================\n") 
+    clauseFile.write("# Cell occupancy constraint -- one cell can contain atmost one droplet at any t\n")
+    clauseFile.write("#================================================================================================\n") 
+    for t in range(0,T+1):
+        clauseFile.write("# consistency clauses (occupancy) at time %d \n"%t)   
+        for x in range(1, numRows+1):
+            for y in range(1,numRows+1):
+                constraint = "s.add(("
+                for d in dropletIdList:
+                    constraint += "If(a_" + str(x) + "_" + str(y) + "_" + str(d) + "_" + str(t) + " == True, 1, 0) + "
+                
+                constraint = constraint[:-3] + ") <= 1)\n"
+                clauseFile.write(constraint) 
+                 
+                
+def cellInDmfb(row_index, col_index):
+    global  numRows, numCols
+    
+    return ((row_index in range(1,numRows+1)) and (col_index in range(1,numCols+1)))
+
+def fourNeighbour(row_index, col_index):
+#================================================================================
+# Returns 4-neighbour cells of (row_index,col_index)
+# in the biochip of size (numRows x numCols)
+#================================================================================
+    global numRows, numCols
+    
+    neighbour = []
+    
+    if cellInDmfb(row_index, col_index) == False:
+        print 'fourNeighbour: Index out of DMFB'
+    else:
+        if (cellInDmfb(row_index-1, col_index) == True):
+            neighbour.append((row_index-1, col_index))
+            
+        if (cellInDmfb(row_index, col_index-1) == True):
+            neighbour.append((row_index, col_index-1))
+            
+        if (cellInDmfb(row_index, col_index+1) == True):
+            neighbour.append((row_index, col_index+1))
+            
+        if (cellInDmfb(row_index+1, col_index) == True):
+            neighbour.append((row_index+1, col_index))
+        
+    return neighbour 
+                
+
+def dropletMovementConstraint(clauseFile, dropletId): 
+#==================================================================================
+# (A droplet on (x,y) at t) IMPLIES (It was already on (x,y) at t-1 OR 
+# any of its four neighbour at t-1 OR dispensed from the reservoir at t)  
+#==================================================================================    
+    global numRows, numCols, dropletDispenserDict
+    
+    clauseFile.write("#================================================================================================\n") 
+    clauseFile.write("# Movement constraint for droplet Id = %d\n"%dropletId)
+    clauseFile.write("#================================================================================================\n")  
+    for x in range(1, numRows+1):
+        for y in range(1, numCols+1):
+            (dropletId_x, dropletId_y) = dropletDispenserDict[dropletId]
+            fourNeighbourCells = fourNeighbour(x, y)
+            for t in range(1, T+1):
+                constraint = "s.add(Implies(a_%d_%d_%d_%d, Or(a_%d_%d_%d_%d, "%(x,y,dropletId,t, x,y,dropletId,t-1) 
+                # Find dispensor location from dropletId
+                
+                for (r,c) in fourNeighbourCells:
+                    constraint += "a_%d_%d_%d_%d, "%(r,c,dropletId,t-1)
+                    
+                constraint = constraint[:-2]
+                
+                if (dropletId_x, dropletId_y) == (x,y):    
+                    # A dispenser cell for dropletId exists at the current location and that dispense a droplet at t  
+                    constraint += ", ip_%d_%d_%d"%(dropletId_x, dropletId_y,t)
+                
+                constraint += ")))\n"
+                clauseFile.write(constraint)
+            clauseFile.write("#---------------------------------------------------------------------------------------\n")
+            
+            
+def dropletDisappearenceConstraint(clauseFile, dropletId): 
+#==================================================================================
+# A droplet may disappear if it comes to a output reservoir cell 
+#==================================================================================    
+    global numRows, numCols, outputLocationList, T
+    
+    clauseFile.write("#================================================================================================\n")  
+    clauseFile.write("# Disappearence constraint for droplet Id = %d\n"%dropletId)
+    clauseFile.write("#================================================================================================\n") 
+    
+    for x in range(1, numRows+1):
+        for y in range(1, numCols+1):
+            for t in range(1, T+1):
+                constraint = "s.add(Implies(And(a_%d_%d_%d_%d, Not(a_%d_%d_%d_%d), "%(x,y,dropletId,t-1, x,y,dropletId, t)
+                
+                fourNeighbourCells = fourNeighbour(x, y)
+                for (r,c) in fourNeighbourCells:
+                    constraint += "Not(a_%d_%d_%d_%d), "%(r,c,dropletId,t)
+                    
+                constraint = constraint[:-2] + "), " 
+                
+                # Check whether the current cell has sink
+                if (x,y) in outputLocationList:                
+                    constraint +=  "op_%d_%d_%d))\n" %(x,y,t)
+                else:
+                    constraint += "False))\n"
+                    
+                clauseFile.write(constraint)
+                
+                
+            clauseFile.write("#--------------------------------------------------------------------------------------\n")
+            
+            
+def insertCheckpoint1X(clauseFile, (x,y), t, dropletIdList): 
+#==================================================================================
+# A droplet (1X) must appear on (x,y) at t
+#==================================================================================    
+    if cellInDmfb(x, y) == False:
+        print 'insertCheckpoint: cell (%d,%d) is not in DMFB'%(x,y)
+        return
+    else:
+        clauseFile.write("#================================================================================================\n") 
+        clauseFile.write("# Checkpoint (1X) on (%d,%d) at %d \n"%(x,y,t))
+        clauseFile.write("#================================================================================================\n") 
+        
+        constraint = "s.add("
+        for d in dropletIdList:
+            constraint += "If(a_%d_%d_%d_%d == True, 1, 0) + "%(x,y,d,t)
+        constraint = constraint[:-2] + "== 1)\n"
+        clauseFile.write(constraint)
+        
+
+def getNewTempVar():
+    # Returns a new temporary variable
+    global __Id
+    newVar = "t"+str(__Id)
+    __Id = __Id + 1
+    return newVar
+        
+
+def enforceMixing(clauseFile, (x1,y1), (x2,y2), start_t, t_mix, dropletIdList):
+#==================================================================================
+# A 1x4 or 4x1 mixer (i/o location (x1,y1), (x2,y2)) must instantiate at start_t
+# and must run for t_mix cycles
+# NOTE: (x1,y1) must be leftmost (topmost) cell for (1x4) ((4x1)) mixer  
+#================================================================================== 
+    if not ((x1==x2 and abs(y1-y2) == 3) or (y1==y2 and abs(x1-x2) == 3)):
+        print "enforceMixing: check mixer specification."
+        return
+    
+    clauseFile.write("#================================================================================================\n") 
+    clauseFile.write("# Instantiate mixer [(%d,%d),(%d,%d)] at %d that runs for %d cycles\n"%(x1,y1,x2,y2,start_t,t_mix))
+    clauseFile.write("#================================================================================================\n") 
+    
+    # processing for mixing cell (x1,y1)
+    tmpVarList = []
+    for d in dropletIdList:
+        newTmpVar = getNewTempVar()
+        tmpVarList.append(newTmpVar)
+        clauseFile.write("%s = Bool('%s')\n"%(newTmpVar,newTmpVar))
+        constraint = "s.add(%s == And("%newTmpVar
+        for t in range(start_t, start_t+t_mix):
+            constraint += "a_%d_%d_%d_%d, "%(x1,y1,d,t)
+        constraint = constraint[:-2] + "))\n"
+        clauseFile.write(constraint)
+        
+    # Enforce droplet at (x1,y1)
+    constraint = "s.add("
+    for var in tmpVarList:
+        constraint += "If(%s == True, 1, 0) + "%var
+    constraint = constraint[:-2] + " == 1)\n"
+    clauseFile.write(constraint)
+    clauseFile.write("#-------------------------------------------------------------------------------------------------\n")
+    
+    # processing for mixing cell (x2,y2)
+    tmpVarList = []
+    for d in dropletIdList:
+        newTmpVar = getNewTempVar()
+        tmpVarList.append(newTmpVar)
+        clauseFile.write("%s = Bool('%s')\n"%(newTmpVar,newTmpVar))
+        constraint = "s.add(%s == And("%newTmpVar
+        for t in range(start_t, start_t+t_mix):
+            constraint += "a_%d_%d_%d_%d, "%(x2,y2,d,t)
+        constraint = constraint[:-2] + "))\n"
+        clauseFile.write(constraint)
+        
+    # Enforce droplet at (x2,y2)
+    constraint = "s.add("
+    for var in tmpVarList:
+        constraint += "If(%s == True, 1, 0) + "%var
+    constraint = constraint[:-2] + " == 1)\n"
+    clauseFile.write(constraint)
+    clauseFile.write("#-------------------------------------------------------------------------------------------------\n")
+    
+    # For the remaining two cells in the mixer, ensure that no droplet must appear during the mixing period
+    
+    if (x1==x2 and abs(y1-y2) == 3):
+        (r1,c1) = (x1,y1+1)
+        (r2,c2) = (x1,y1+2)
+    else:
+        (r1,c1) = (x1+1,y1)
+        (r2,c2) = (x1+2,y2)
+        
+    # processing for mixing cell (r1,c1) and (r2,c2)
+    for t in range(start_t, start_t+t_mix):
+        constraint1 = "s.add(And("
+        constraint2 = "s.add(And("
+        for d in dropletIdList:
+            constraint1 += "Not(a_%d_%d_%d_%d), "%(r1,c1,d,t)
+            constraint2 += "Not(a_%d_%d_%d_%d), "%(r2,c2,d,t)
+        constraint1 = constraint1[:-2] + "))\n"
+        constraint2 = constraint2[:-2] + "))\n"
+        
+        clauseFile.write(constraint1)
+        clauseFile.write(constraint2)           
+    
+                    
+                      
+# -------------------------------------------------------------------------------------------------------
+#-------------------------------Setup conditions---------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------
+ 
+def initialConfiguration(clauseFile, dropletIdList):
+#===============================================================================
+# No droplet present at t = 0
+#===============================================================================
+    global numRows, numCols
+    
+    clauseFile.write("#================================================================================================\n") 
+    clauseFile.write("# No droplet should present at time step 0\n")
+    clauseFile.write("#================================================================================================\n") 
+    
+    for Id in dropletIdList:
+        constraint = "s.add(And("
+        for x in range(1,numRows+1):
+            for y in range(1,numCols+1):
+                constraint += "Not(a_%d_%d_%d_0), "%(x,y,Id)
+        
+        constraint = constraint[:-2] + "))\n"
+        
+        clauseFile.write(constraint)
+        
+def finalConfiguration(clauseFile, dropletIdList):
+#===============================================================================
+# No droplet present at t = 0
+#===============================================================================
+    global numRows, numCols, T
+    
+    clauseFile.write("#================================================================================================\n") 
+    clauseFile.write("# No droplet should present at time step T\n")
+    clauseFile.write("#================================================================================================\n") 
+    
+    for Id in dropletIdList:
+        constraint = "s.add(And("
+        for x in range(1,numRows+1):
+            for y in range(1,numCols+1):
+                constraint += "Not(a_%d_%d_%d_%d), "%(x,y,Id,T)
+        
+        constraint = constraint[:-2] + "))\n"
+        
+        clauseFile.write(constraint)
+        
+
+def enforceDropletDispense(clauseFile, (x, y), t_list):
+#========================================================================================
+# A droplet is dispensed on location (x,y) at each time t belongs to t_list 
+# Note: Also enforce correct droplet Id by adding s.add(a_x_y_d_t)
+# d is known from existing synthesis, t belongs to t_list (known from existing synthesis)
+#========================================================================================
+    global dropletDispenserDict
+    
+    # Check whether a valid dispenser is available at that location or not
+    
+    if (x,y) not in dropletDispenserDict.values():
+        print "dropletDispense: no dispenser is available to dispense a droplet on (%d,%d)"%(x,y)
+        exit()
+        
+    clauseFile.write("#================================================================================================\n") 
+    clauseFile.write("# Droplet dispensing constraint on (%d,%d) at %s\n"%(x,y,str(t_list)))
+    clauseFile.write("#================================================================================================\n") 
+    
+    constraint = "s.add(And("
+    
+    for t in range(0, T+1):
+        if t in t_list:
+            constraint += "ip_%d_%d_%d, "%(x,y,t)
+        else:
+            constraint += "Not(ip_%d_%d_%d), "%(x,y,t)
+    
+    constraint = constraint[:-2] + "))\n"
+    clauseFile.write(constraint)
+    
+
+def enforceDropletDisappearence(clauseFile, (x, y), t_list, dropletIdList):
+#===============================================================================
+# A droplet disappears on location (x,y) at each time t belongs to t_list
+# This constraint guarantees droplet disappearance 
+#=============================================================================== 
+    global T
+   
+    clauseFile.write("#================================================================================================\n")  
+    clauseFile.write("# A droplet on (%d,%d) may go to output at time %s \n"%(x,y,str(t_list))) 
+    clauseFile.write("#================================================================================================\n") 
+    constraint = "s.add(And("
+    for t in range(0,T+1):
+        if t in t_list:
+            constraint += "op_%d_%d_%d, "%(x,y,t)
+        else:
+            constraint += "Not(op_%d_%d_%d), "%(x,y,t)
+    
+    constraint = constraint[:-2] + "))\n"        
+    clauseFile.write(constraint)
+    
+    # Guarantee droplet disappearance
+    for t in t_list:
+        if t < T:
+            tmpVarList = []
+            for d in dropletIdList:
+                newTmpVar = getNewTempVar()
+                tmpVarList.append(newTmpVar)
+                clauseFile.write("%s = Bool('%s')\n"%(newTmpVar,newTmpVar))
+                constraint = "s.add(%s == And(a_%d_%d_%d_%d, Not(a_%d_%d_%d_%d), "%(newTmpVar, x,y,d,t-1, x,y,d,t)
+                fourNeighbourCells = fourNeighbour(x, y)
+                for (r,c) in fourNeighbourCells:
+                    constraint += "Not(a_%d_%d_%d_%d), "%(r,c,d,t)
+                
+                constraint = constraint[:-2] + "))\n"
+                clauseFile.write(constraint)
+    
+            constraint = "s.add("
+            for var in tmpVarList:
+                constraint += "If(%s == True, 1, 0) + "%var
+            constraint = constraint[:-2] + " == 1)\n"
+            clauseFile.write(constraint)            
+         
+    
+def main():
+    global numRows, numCols, T
+
+    clauseFile = open('clause.py','w')
+    
+    dropletIdList = (1,2,3)
+    
+    init(clauseFile)
+    
+    varDeclare(clauseFile, dropletIdList)
+    dropletUniqnessConstraint(clauseFile, dropletIdList)
+    cellOccupancyConstraint(clauseFile, dropletIdList)
+    for d in dropletIdList:
+        dropletMovementConstraint(clauseFile, d)
+        
+    for d in dropletIdList:
+        dropletDisappearenceConstraint(clauseFile, d)
+    
+    
+    initialConfiguration(clauseFile, dropletIdList)
+    
+    enforceDropletDispense(clauseFile, (2,1), [1,8])
+    clauseFile.write("s.add(a_2_1_1_1)\n")
+    clauseFile.write("s.add(a_2_1_3_8)\n")
+    clauseFile.write("s.add(a_1_1_3_9)\n")
+    
+    enforceDropletDispense(clauseFile, (2,6), [1])
+    clauseFile.write("s.add(a_2_6_2_1)\n")
+    
+    enforceMixing(clauseFile, (3,2), (3,5), 3, 4, dropletIdList)
+    enforceMixing(clauseFile, (3,2), (3,5), 12, 4, dropletIdList)
+    
+    enforceDropletDisappearence(clauseFile, (5,1), [10, 20], dropletIdList)
+    #insertCheckpoint1X(clauseFile, (5,1), 9, dropletIdList)
+    #insertCheckpoint1X(clauseFile, (5,1), 19, dropletIdList)
+    
+    enforceDropletDisappearence(clauseFile, (6,5), [20], dropletIdList)
+    #insertCheckpoint1X(clauseFile, (6,5), 19, dropletIdList)    
+    
+    
+    finalConfiguration(clauseFile, dropletIdList)
+    finish(clauseFile)                    
+                    
+if __name__ == "__main__":
+    main()  
+    
+    subprocess.call(["python","clause.py"])                  
+    

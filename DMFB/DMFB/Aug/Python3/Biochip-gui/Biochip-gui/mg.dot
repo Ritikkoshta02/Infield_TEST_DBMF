@@ -1,0 +1,7 @@
+digraph "DD" { 
+ node [fontsize = 8];
+0 [label = "Sample",  shape = octagon]
+1 [label = "Buffer",  shape = octagon]
+{ rank = same;0;1;}
+{ rank = same;}
+}

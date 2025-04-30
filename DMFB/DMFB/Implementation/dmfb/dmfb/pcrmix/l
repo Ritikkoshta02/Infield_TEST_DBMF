@@ -1,0 +1,418 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./Biochip.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 3 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty))))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex))) (./Biochip.aux)
+ABD: EveryShipout initializing macros
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+Overfull \hbox (172.1287pt too wide) in paragraph at lines 27--30
+[][]
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (172.1287pt too wide) in paragraph at lines 44--47
+[][]
+[2]
+Overfull \hbox (172.1287pt too wide) in paragraph at lines 61--64
+[][]
+[3]
+Overfull \hbox (172.1287pt too wide) in paragraph at lines 78--81
+[][]
+[4]
+Overfull \hbox (172.1287pt too wide) in paragraph at lines 95--98
+[][]
+[5]
+Overfull \hbox (172.1287pt too wide) in paragraph at lines 112--115
+[][]
+[6]
+Overfull \hbox (172.1287pt too wide) in paragraph at lines 129--132
+[][]
+[7]
+Overfull \hbox (172.1287pt too wide) in paragraph at lines 146--149
+[][]
+[8]
+Overfull \hbox (172.1287pt too wide) in paragraph at lines 163--166
+[][]
+[9]
+Overfull \hbox (172.1287pt too wide) in paragraph at lines 180--183
+[][]
+[10]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 197--200
+[][]
+[11]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 214--217
+[][]
+[12]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 231--234
+[][]
+[13]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 248--251
+[][]
+[14]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 265--268
+[][]
+[15]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 282--285
+[][]
+[16]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 299--302
+[][]
+[17]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 316--319
+[][]
+[18]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 333--336
+[][]
+[19]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 350--353
+[][]
+[20]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 367--370
+[][]
+[21]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 384--387
+[][]
+[22]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 401--404
+[][]
+[23]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 418--421
+[][]
+[24]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 435--438
+[][]
+[25]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 452--455
+[][]
+[26]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 469--472
+[][]
+[27]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 486--489
+[][]
+[28]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 503--506
+[][]
+[29]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 520--523
+[][]
+[30]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 537--540
+[][]
+[31]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 554--557
+[][]
+[32]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 571--574
+[][]
+[33]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 588--591
+[][]
+[34]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 605--608
+[][]
+[35]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 622--625
+[][]
+[36]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 639--642
+[][]
+[37]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 656--659
+[][]
+[38]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 673--676
+[][]
+[39]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 690--693
+[][]
+[40]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 707--710
+[][]
+[41]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 724--727
+[][]
+[42]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 741--744
+[][]
+[43]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 758--761
+[][]
+[44]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 775--778
+[][]
+[45]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 792--795
+[][]
+[46]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 809--812
+[][]
+[47]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 826--829
+[][]
+[48]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 843--846
+[][]
+[49]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 860--863
+[][]
+[50]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 877--880
+[][]
+[51]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 894--897
+[][]
+[52]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 911--914
+[][]
+[53]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 928--931
+[][]
+[54]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 945--948
+[][]
+[55]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 962--965
+[][]
+[56]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 979--982
+[][]
+[57]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 996--999
+[][]
+[58]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1013--1016
+[][]
+[59]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1030--1033
+[][]
+[60]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1047--1050
+[][]
+[61]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1064--1067
+[][]
+[62]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1081--1084
+[][]
+[63]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1098--1101
+[][]
+[64]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1115--1118
+[][]
+[65]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1132--1135
+[][]
+[66]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1149--1152
+[][]
+[67]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1166--1169
+[][]
+[68]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1183--1186
+[][]
+[69]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1200--1203
+[][]
+[70]
+Overfull \hbox (177.12871pt too wide) in paragraph at lines 1217--1220
+[][]
+[71] (./Biochip.aux) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb>
+Output written on Biochip.pdf (71 pages, 90878 bytes).
+Transcript written on Biochip.log.
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
