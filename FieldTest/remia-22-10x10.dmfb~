@@ -1,0 +1,61 @@
+dimension	10 10
+
+accuracy 6
+
+reagent(6,1,Sample) reagent(6, 10, Buffer)   waste_reservoir(1, 4)  output_reservoir(10,7)  
+
+1 dispense(6,1) dispense(6,10)
+2 move(6,1,6,2) move(6,10,6,9)
+3 move(6,2,6,3) move(6,9,6,8)
+4 move(6,3,6,4) move(6,8,6,7)
+5 mix_split(6,4,6,7,6)
+12 dispense(6,10) move(6,7,7,7)
+13 move(6,10,6,9) move(7,7,8,7)
+14 move(6,9,6,8) move(8,7,9,7)
+15 move(6,8,6,7)
+16 mix_split(6,4,6,7,6)
+20 dispense(6,10)
+21 move(6,10,6,9)
+23 move(6,4,5,4) move(6,7,6,6) 
+24 move(5,4,4,4) 
+25 move(6,6,6,5) move(6,9,6,8)
+26 move(6,5,6,4) move(6,8,6,7)
+27 mix_split(6,4,6,7,6)
+35 move(6,4,6,5) move (6,7,5,7)
+36 move(5,7,4,7)
+37 move(6,5,6,6) move(4,7,3,7)
+38 move(6,6,6,7) move(3,7,2,7) move(4,4,5,4)
+39 move(5,4,6,4) move(2,7,2,6)
+40 mix_split(6,4,6,7,6) move(2,6,2,5) move(9,7,9,6)
+41 move(2,5,2,4) move(9,6,9,5)
+42 move(2,4,1,4) move(9,5,9,4)
+43 waste(1,4) move(9,4,8,4)
+47 move(6,4,5,4)
+48 move(5,4,4,4) move(8,4,7,4)
+49 move(4,4,3,4) move(7,4,6,4)
+50 mix_split(6,4,6,7,6)
+51 move(3,4,2,4)
+52 move(2,4,1,4)
+53 waste(1,4)
+57 move(6,4,5,4) move(6,7,7,7)
+58 move(5,4,4,4) move(7,7,8,7)
+59 move(4,4,3,4) move(8,7,9,7)
+60 move(3,4,2,4) move(9,7,10,7)
+61 move(2,4,1,4) output(10,7)
+62 waste(1,4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
