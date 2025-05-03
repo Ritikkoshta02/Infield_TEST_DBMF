@@ -51,19 +51,19 @@ FOOTPRINTS_4 = [
 total_edges_4 = len(FOOTPRINTS_4)
 
 # Initialize Q-table
-Q_table_1 = defaultdict(lambda: np.zeros(NUM_ACTIONS))
-Q_table_2 = defaultdict(lambda: np.zeros(NUM_ACTIONS))
-Q_table_3 = defaultdict(lambda: np.zeros(NUM_ACTIONS))
-Q_table_4 = defaultdict(lambda: np.zeros(NUM_ACTIONS))
+Q_table_1 = defaultdict(lambda: np.full(NUM_ACTIONS, 1000.0))
+Q_table_2 = defaultdict(lambda: np.full(NUM_ACTIONS, 1000.0))
+Q_table_3 = defaultdict(lambda: np.full(NUM_ACTIONS, 1000.0))
+Q_table_4 = defaultdict(lambda: np.full(NUM_ACTIONS, 1000.0))
+
 
 # Hyperparameters
 alpha = 0.0009  # Learning rate
 alpha_gain = 1.00009
 alpha_max = 0.9
 gamma = 0.99  # Discount factor
-epsilon = 1.0  # Exploration rate
-epsilon_min = 0.07
-epsilon_decay = 0.999995
+epsilon = 0.1  # Exploration rate
+
 
 # Normalize edge to ensure bidirectionality
 def normalize_edge(edge):
@@ -90,7 +90,7 @@ def init_environment():
 
 # Choose an action using epsilon-greedy policy
 def choose_action(Q_table,state, episode):
-    if np.random.rand() <= epsilon and (episode % 100000 != 0):
+    if np.random.rand() <= epsilon and (episode % 100000 != 0) and (episode >= 350000):
         return random.choice(range(NUM_ACTIONS))
     else:
         return np.argmax(Q_table[state])
@@ -323,7 +323,6 @@ def q_learning(episodes=2500):
             if collision_Flag_1 or collision_Flag_2 or collision_Flag_3 or collision_Flag_4:
                 break
 
-        epsilon = max(epsilon_min, epsilon * epsilon_decay)
         alpha = min(alpha_max, alpha * alpha_gain )
               
         if (maxReward) <= (total_reward_1 + total_reward_2 + total_reward_4 + total_reward_4) and (collision_Flag_1 == False) and (collision_Flag_2 == False) and (collision_Flag_3 == False) and (collision_Flag_4 == False)  :

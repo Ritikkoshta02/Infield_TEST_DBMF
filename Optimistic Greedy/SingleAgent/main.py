@@ -42,16 +42,16 @@ total_edges = len(FOOTPRINTS)
 # Q_table_1 = np.zeros((GRID_WIDTH, GRID_HEIGHT, TIME_STEPS, NUM_ACTIONS))
 
 # Initialize Q-table
-Q_table = defaultdict(lambda: np.zeros(NUM_ACTIONS))
+Q_table = defaultdict(lambda: np.full(NUM_ACTIONS, 1000.0))
+
 
 # Hyperparameters
 alpha = 0.001  # Learning rate
 alpha_gain = 1.00005
 alpha_max = 0.8
 gamma = 0.99  # Discount factor
-epsilon = 1.0  # Exploration rate
-epsilon_min = 0.05
-epsilon_decay = 0.99999
+epsilon = 0.1  # Exploration rate
+
 
 # Normalize edge to ensure bidirectionality
 def normalize_edge(edge):
@@ -177,7 +177,6 @@ def q_learning(episodes=2500):
             if collision_Flag:
                 break
 
-        epsilon = max(epsilon_min, epsilon * epsilon_decay)
         alpha = min(alpha_max, alpha * alpha_gain )
               
         if (maxReward) <= total_reward and (collision_Flag == False)  :

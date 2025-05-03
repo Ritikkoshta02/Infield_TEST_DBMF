@@ -47,17 +47,17 @@ total_edges_2 = len(FOOTPRINTS_2)
 # Q_table_2 = np.zeros((GRID_WIDTH, GRID_HEIGHT, TIME_STEPS, NUM_ACTIONS))
 
 # Initialize Q-table
-Q_table_1 = defaultdict(lambda: np.zeros(NUM_ACTIONS))
-Q_table_2 = defaultdict(lambda: np.zeros(NUM_ACTIONS))
+Q_table_1 = defaultdict(lambda: np.full(NUM_ACTIONS, 1000.0))
+Q_table_2 = defaultdict(lambda: np.full(NUM_ACTIONS, 1000.0))
+
 
 # Hyperparameters
 alpha = 0.001  # Learning rate
 alpha_gain = 1.00009
 alpha_max = 0.9
 gamma = 0.99  # Discount factor
-epsilon = 1.0  # Exploration rate
-epsilon_min = 0.05
-epsilon_decay = 0.999991
+epsilon = 0.1  # Exploration rate
+
 
 # Normalize edge to ensure bidirectionality
 def normalize_edge(edge):
@@ -228,7 +228,6 @@ def q_learning(episodes=2500):
                 # print(f"Collision_Obstical {time_step} and {episode}")
                 break
 
-        epsilon = max(epsilon_min, epsilon * epsilon_decay)
         alpha = min(alpha_max, alpha * alpha_gain )
               
         if (maxReward) <= (total_reward_1 + total_reward_2) and (collision_Flag_1 == False) and (collision_Flag_2 == False)  :
