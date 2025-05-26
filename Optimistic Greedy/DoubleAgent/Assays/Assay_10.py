@@ -208,4 +208,4 @@ Start_3 = (31,1)
 Start_4 = (31,30)
 
 Name = "assaySample30x30"
-print(len(FOOTPRINT_4)+len(FOOTPRINT_3)+len(FOOTPRINT_2)+len(FOOTPRINT_1))
+# print(len(FOOTPRINT_4)+len(FOOTPRINT_3)+len(FOOTPRINT_2)+len(FOOTPRINT_1))
