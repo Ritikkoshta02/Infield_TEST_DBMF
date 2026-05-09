@@ -15,6 +15,13 @@ Compared to traditional SAT-based methods, the proposed RL solution:
 - Generates reliable routing paths
 - Maintains assay integrity during testing
 
+After completion of the assay execution time, a greedy algorithm is used to:
+
+- Cover all remaining uncovered footprints
+- Route the test droplet safely to the sink position
+
+This hybrid RL + greedy strategy helps improve testing efficiency while ensuring complete coverage of the DMFB.
+
 This repository contains the implementation used in our research work on RL-based in-field testing of DMFBs.
 
 ---
@@ -27,7 +34,8 @@ Infield_TEST_DMFB/
 ├── Example/
 │   ├── main.py
 │   ├── render.py
-│   ├── assay_file.py
+│   ├── assay/
+|   |   |-----assay_1.py
 │   └── ...
 │
 ├── README.md
@@ -103,6 +111,8 @@ The RL agent will start training and generate the best routing path for the test
 
 After training, you will obtain an action sequence array corresponding to the best episode.
 
+Once the assay execution time is completed, the greedy algorithm automatically handles the remaining uncovered footprints and routes the test droplet to the sink.
+
 ---
 
 ## Step 4: Generate Grid Visualization
@@ -126,6 +136,8 @@ The framework produces:
 - Optimal droplet routing paths
 - Action sequence arrays
 - Grid-based routing visualization
+- Complete footprint coverage
+- Sink routing after assay completion
 - Reduced test completion time compared to SAT-based approaches
 
 ---
@@ -134,6 +146,8 @@ The framework produces:
 
 This work proposes a scalable RL-based framework for concurrent in-field testing of DMFBs. The approach enables efficient defect detection while preserving ongoing bioassay operations, making it suitable for real-world biomedical applications.
 
+The integration of reinforcement learning with a greedy post-processing strategy improves scalability and overall routing efficiency for larger DMFB grids.
+
 ---
 
 # Citation
@@ -141,8 +155,8 @@ This work proposes a scalable RL-based framework for concurrent in-field testing
 If you use this work in your research, please cite the corresponding paper.
 
 ```bibtex
-@article{yourpaper,
-  title={Intelligent In-Field Testing of Digital Microfluidic Biochips using Reinforcement Learning},
+@article{Link_of_paper,
+  title={ Intelligent In-Field Testing of Digital Microfluidic Biochips using Reinforcement Learning},
   author={Author Name},
   journal={Conference/Journal Name},
   year={2026}
