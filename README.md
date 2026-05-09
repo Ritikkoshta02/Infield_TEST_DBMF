@@ -24,7 +24,7 @@ This repository contains the implementation used in our research work on RL-base
 ```bash
 Infield_TEST_DMFB/
 │
-├── example/
+├── Example/
 │   ├── main.py
 │   ├── render.py
 │   ├── assay_file.py
@@ -142,7 +142,7 @@ If you use this work in your research, please cite the corresponding paper.
 
 ```bibtex
 @article{yourpaper,
-  title={Reinforcement Learning Based In-Field Testing of Digital Microfluidic Biochips},
+  title={Intelligent In-Field Testing of Digital Microfluidic Biochips using Reinforcement Learning},
   author={Author Name},
   journal={Conference/Journal Name},
   year={2026}
