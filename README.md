@@ -77,7 +77,7 @@ pip install -r requirements.txt
 ## Step 1: Go to Example Folder
 
 ```bash
-cd example
+cd Example
 ```
 
 ---
